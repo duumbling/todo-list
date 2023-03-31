@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+body {
+  background: linear-gradient(55.95deg, #ff403a3d 0%, #f75e0547 100%)
+}
+
+.todo-body {
+  max-width: 500px;
+  height: 450px;
+  margin: 100px auto;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.todo-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.todo-input::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.123);
+  left: 0;
+  bottom: -20px;
+}
+
+.todo-input input {
+  font-size: 20px;
+  padding: 10px;
+  width: 350px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid black;
+}
+
+.todo-input input:focus {
+  border: 2px solid rgb(90, 156, 237) !important;
+}
+
+.add-btn {
+  width: 70px;
+  height: 40px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  background-color: rgb(127, 180, 255);
+}
+
+.add-btn:hover {
+  background-color: rgb(118, 167, 235);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.todo-content {
+  /* margin-bottom: 50px; */
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 300px;
+  overflow: auto;
+
+}
+
+.list-item {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: rgba(3, 108, 255, 0.147);
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 10px;
+  align-items: center;
+  position: relative;
+}
+
+.list-item-check {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background: url('./img/checkbox.svg') center no-repeat;
+  background-size: contain;
+}
+
+.list-item-check.checked {
+  background: url('./img/checked.svg') center no-repeat;
+  background-size: contain;
+}
+
+li:has(.checked) {
+  background-color: rgba(136, 219, 158, 0.482);
+  text-decoration: line-through;
+}
+
+.list-item-text {
+  font-size: 18px;
+}
+
+.list-item-btn {
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: rgb(246, 94, 94);
+  position: absolute;
+  right: 10px;
+}
+
+.list-item-btn:hover {
+  background-color: rgb(226, 75, 75);
+}
+
+.list-item-btn img {
+  width: 20px;
+  height: 20px;
+}
