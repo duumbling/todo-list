@@ -16,11 +16,14 @@ body {
 
 .todo-body {
   max-width: 500px;
-  height: 450px;
+  height: 480px;
   margin: 100px auto;
-  padding: 30px;
+  padding: 20px;
+  padding-bottom: 10px;
   border-radius: 20px;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 .todo-input {
@@ -83,7 +86,7 @@ body {
   gap: 10px;
   height: 300px;
   overflow: auto;
-
+  margin-bottom: 20px;
 }
 
 .list-item {
@@ -103,6 +106,7 @@ body {
   cursor: pointer;
   background: url('./img/checkbox.svg') center no-repeat;
   background-size: contain;
+  flex-shrink: 0;
 }
 
 .list-item-check.checked {
@@ -117,11 +121,16 @@ li:has(.checked) {
 
 .list-item-text {
   font-size: 18px;
+  max-width: 460px;
+  word-wrap: break-word;
+  padding: 10px 140px 10px 0px;
 }
 
-.list-item-btn {
+.list-item-remove {
+  background: url('./img/trash-can-svgrepo-com.svg') center no-repeat;
+  background-size: 87%;
   border-radius: 5px;
-  padding: 5px;
+  padding: 13px 12px 13px 13px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,11 +140,47 @@ li:has(.checked) {
   right: 10px;
 }
 
-.list-item-btn:hover {
+.list-item.onEdit .list-item-edit {
+
+  background: url("./img/edit-check.svg") center no-repeat;
+  background-size: cover;
+  background-color: rgb(238, 200, 75);
+}
+
+.list-item-edit {
+  background: url('./img/pencil-svgrepo-com.svg') center no-repeat;
+  background-size: 88%;
+  border-radius: 5px;
+  padding: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: rgb(238, 200, 75);
+  position: absolute;
+  right: 50px;
+}
+
+.list-item-remove:hover {
   background-color: rgb(226, 75, 75);
 }
 
-.list-item-btn img {
-  width: 20px;
-  height: 20px;
+.list-item-edit:hover {
+  background-color: rgb(225, 189, 68);
+}
+
+.removeAll {
+  width: 90px;
+  height: 40px;
+  align-self: center;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  background-color: rgb(253, 100, 110);
+}
+
+.removeAll:hover {
+  background-color: rgb(232, 87, 97);
 }
