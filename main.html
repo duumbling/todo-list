@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
   <title>ToDo</title>
 </head>
 
@@ -13,8 +16,11 @@
   <section class="todo-body">
 
     <div class="todo-input">
-      <input type="text" autofocus>
-      <button class="add-btn">Add</button>
+      <input type="text" autofocus maxlength="20" class="inp">
+      <div class="todo-input-btns">
+        <input type="date" class="date-inp">
+        <button class=" add-btn">Add</button>
+      </div>
     </div>
     <ul class="todo-list">
       <!-- <li class="list-item" id="4">
@@ -24,6 +30,7 @@
           <img src="./trash-can-svgrepo-com.svg">
         </button>
       </li> -->
+      <!-- <input type="date" class="date-inp"> -->
     </ul>
     <button class="removeAll">Remove all</button>
   </section>
